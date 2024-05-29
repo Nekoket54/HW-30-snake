@@ -1,0 +1,102 @@
+body{
+    border: 3px solid black;
+    width: 600px;
+    height: 600px;
+    margin-top: 100px;
+    margin-left: 100px;
+    padding: 50px;
+}
+
+.snake{
+    display: flex;
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    animation-name: snake;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+
+    border-radius: 30%;
+}
+
+.snake::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin-left: 130px;
+    border-radius: 100%;
+}
+
+.text{
+    padding-left: 90px;
+}
+
+/* .apll{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    animation-name: aplle;
+    animation-duration: 6.6s;
+    animation-iteration-count: infinite;
+    border-radius: 100%;
+} */
+
+@keyframes snake {
+    0% {
+        margin: 0px;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        margin: 0px;
+        margin-left: 500px;
+        transform: rotate(90deg);
+    }
+
+    50% {
+        margin-left: 500px;
+        margin-top: 500px;
+        transform: rotate(180deg);
+    }
+
+    75% {
+        margin-top: 500px;
+        margin-right: 500px;
+        margin-left: 0px;
+        transform: rotate(270deg);
+    }
+
+    100% {
+        margin-bottom: 500px;
+        transform: rotate(360deg);
+    }
+} 
+
+/* @keyframes aplle {
+    0% {
+        margin: 0px;
+    }
+
+    25% {
+        margin: 0px;
+        margin-left: 500px;
+    }
+
+    50% {
+        margin-left: 500px;
+        margin-top: 500px;
+    }
+
+    75% {
+        margin-top: 500px;
+        margin-right: 500px;
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-bottom: 500px;
+    }
+}  */
